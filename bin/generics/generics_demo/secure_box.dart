@@ -1,0 +1,9 @@
+// generics type : fungsinya menggantikan type data : SecureBox<T>
+
+class SecureBox<T> {
+  final T _data;
+  final String _pin;
+
+  SecureBox(this._data, this._pin);
+  T? getData(String pin) => (pin == _pin) ? _data : null;
+}
